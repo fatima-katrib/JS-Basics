@@ -1,3 +1,10 @@
-const nb_1 =prompt("Enter the first number?"), nb_2 =prompt("Enter the second number?");
-let multiple = nb_1*nb_2;
-alert(`result of ${nb_1}*${nb_2} = ${multiple}`); 
+let nb_1 = document.getElementById("first_number");
+let nb_2 = document.getElementById("second_number");
+
+nb_1.value = prompt("Enter the first number?");
+nb_2.value = prompt("Enter the second number?");
+
+document.getElementById("validate").addEventListener("click", (e) => {
+  e.preventDefault;
+  alert(`result of ${nb_1.value}*${nb_2.value} = ${nb_1.value * nb_2.value}`);
+});
