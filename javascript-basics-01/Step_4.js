@@ -1,12 +1,12 @@
-const name_prompt =prompt("what is your name?"), surname_prompt =prompt("what is your surname?"), city_prompt = prompt("what is your city name?");
+const nameElt = document.getElementById("name");
+const surnameElt = document.getElementById("surname");
+const cityElt = document.getElementById("city");
 
-let name = document.getElementById("name");
-name.value= name_prompt;
+nameElt.value = prompt("what is your name?");
+surnameElt.value = prompt("what is your surname?");
+cityElt.value = prompt("what is your city name?");
 
-let surname = document.getElementById("surname");
-surname.value = surname_prompt;
-
-let city = document.getElementById("city");
-city.value=city_prompt;
-
-document.getElementById("validate").addEventListener("click", alert(`Nom: ${surname.value}\n Prénom: ${name.value}\n Ville: ${city.value}`)); 
+document.getElementById("validate").addEventListener("click", (e) => {
+  e.preventDefault();
+  alert(`Nom: ${surname.value}\n Prénom: ${name.value}\n Ville: ${city.value}`);
+});
