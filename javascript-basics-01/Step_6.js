@@ -1,4 +1,16 @@
-const nb_1 =prompt("Enter the first number?"), nb_2 =prompt("Enter the second number?");
-let division = nb_1/nb_2;
-let remainder=nb_1%nb_2;
-alert(`the reaminder of ${nb_1}/${nb_2} = ${remainder}`); 
+const firstnbElt = document.getElementById("first_number");
+const secondnbElt = document.getElementById("second_number");
+
+firstnbElt.value = prompt("Enter the first number?");
+secondnbElt.value = prompt("Enter the second number?");
+
+let division = firstnbElt.value / secondnbElt.value;
+
+document.getElementById("validate").addEventListener("click", (e) => {
+  e.preventDefault;
+  alert(
+    `the reaminder of ${firstnbElt.value}/${secondnbElt.value} = ${
+      firstnbElt.value % secondnbElt.value
+    }`
+  );
+});
